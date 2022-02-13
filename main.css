@@ -1,0 +1,456 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  /* color  */
+  --DarkBlue: hsl(233, 26%, 24%);
+  --LimeGreen: hsl(136, 65%, 51%);
+  --BrightCyan: hsl(192, 70%, 51%);
+
+  /* neutral colors */
+  --GrayishBlue: hsl(233, 8%, 62%);
+  --LightGrayishBlue: hsl(220, 16%, 96%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  /* fonts  */
+  font-family: "Public Sans", sans-serif;
+}
+
+/* navbar  */
+
+navbar {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2.2rem;
+  align-items: center;
+  position: fixed;
+  background-color: var(--White);
+  align-self: center;
+  width: 94vw;
+  height: 0%;
+  z-index: 1000;
+}
+
+.nav > * {
+  margin: 1rem;
+  list-style: none;
+  text-decoration: none;
+  color: var(--GrayishBlue);
+}
+
+.request_btn {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  color: var(--White);
+  padding: 10px 20px;
+  border-radius: 30px 30px 30px 30px;
+  text-decoration: none;
+  font-size: small;
+}
+
+/* Main section  */
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--VeryLightGray);
+  background-image: url(./images/bg-intro-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 600px;
+  background-position: 500px;
+  overflow: hidden;
+}
+
+.next-gen {
+  padding: 160px;
+  /* background-color: yellow; */
+}
+
+.next-gen h1 {
+  font-size: 2.7rem;
+  color: var(--DarkBlue);
+}
+
+.next-gen p {
+  color: var(--GrayishBlue);
+  line-height: 24px;
+}
+
+.next-gen #btn {
+  position: absolute;
+  top: 500px;
+}
+
+.mobile > * {
+  margin-right: -150px;
+  margin-top: 100px;
+}
+
+/* <!-- ---------- Why Choose EasyBank -->  */
+
+section {
+  background-color: var(--LightGrayishBlue);
+}
+
+.choose {
+  /* background-color: blue; */
+  /* width: 90vw; */
+  margin: auto;
+  padding: 100px;
+}
+.choose h1 {
+  font-size: 2.7rem;
+}
+.choose p {
+  color: var(--GrayishBlue);
+}
+
+.four-section {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.online p {
+  color: var(--GrayishBlue);
+}
+
+.online {
+  margin: 20px;
+}
+
+/* <!-- Lastest Article Section   -->  */
+
+article {
+  background-color: var(--VeryLightGray);
+  height: 100vh;
+  padding: 20px;
+}
+
+article h1 {
+  font-size: 2.7rem;
+  /* background-color: yellow; */
+  width: fit-content;
+  position: relative;
+  left: 80px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+}
+
+.card {
+  width: 18rem;
+  height: 30rem;
+  background-color: var(--White);
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  color: var(--GrayishBlue);
+}
+
+/* footer  */
+
+footer {
+  background-color: var(--DarkBlue);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+
+.footer-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: yellow; */
+}
+
+.footeronediv {
+  /* background-color: blueviolet; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.linkone {
+  display: flex;
+  flex-flow: column;
+}
+
+.linkone > * {
+  color: var(--White);
+  margin: 10px;
+}
+
+.linktwo {
+  display: flex;
+  flex-flow: column;
+}
+
+.linktwo > * {
+  color: var(--White);
+  margin: 10px;
+}
+
+.Request_section {
+  display: flex;
+  flex-flow: column;
+  width: fit-content;
+  justify-content: space-between;
+}
+
+.Request_section > * {
+  color: white;
+}
+
+#ham {
+  visibility: hidden;
+}
+
+#mobileimg {
+  display: none;
+}
+
+#navbar{
+  display: none;
+}
+
+/* Mobile  @ media query  */
+
+@media (max-width: 430px) {
+  /* <!-- Nav Bar  -->  */
+  navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 84vw;
+  }
+  nav {
+    visibility:hidden;
+    background-color: white;
+    margin: auto 10px 50px -120px;
+    padding: 50px 100px;
+    text-align: center;
+    box-shadow: 10px 10px 40px rgb(83, 83, 83);
+    border-radius: 5px;
+  }
+  #ham {
+    visibility: visible;
+    cursor: pointer;
+  }
+  navbar a {
+    display: block;
+  }
+  
+
+
+  
+
+  /* <!-- ---------- Next generation Section */
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+
+  .next-gen {
+    padding: 40px;
+    text-align: center;
+    /* background-color: yellow; */
+  }
+
+  .next-gen h1 {
+    font-size: 2.7rem;
+    color: var(--DarkBlue);
+    text-align: center;
+  }
+
+  .next-gen p {
+    color: var(--GrayishBlue);
+    line-height: 24px;
+  }
+
+  .next-gen #btn {
+    position: absolute;
+    top: 500px;
+  }
+
+  .mobile > * {
+    margin-right: -150px;
+    margin-top: 100px;
+  }
+
+  .request_btn {
+    display: none;
+  }
+
+  /* <!-- ---------- Why Choose EasyBank -->  */
+
+  section {
+    background-color: var(--LightGrayishBlue);
+  }
+
+  .choose {
+    /* background-color: blue; */
+    /* width: 90vw; */
+    /* margin: auto; */
+    /* padding: 100px; */
+    text-align: center;
+  }
+  .choose h1 {
+    font-size: 2.4rem;
+  }
+  .choose p {
+    color: var(--GrayishBlue);
+  }
+
+  .four-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .online p {
+    color: var(--GrayishBlue);
+  }
+
+  .online {
+    margin: 10px;
+  }
+
+  /* <!-- Lastest Article Section   -->  */
+
+  article {
+    background-color: var(--LightGrayishBlue);
+    height: 100%;
+    padding: 20px;
+  }
+
+  article h1 {
+    font-size: 2.4rem;
+    /* background-color: yellow; */
+    /* width: fit-content; */
+    text-align: center;
+    position: relative;
+    left: 70px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+  }
+
+  .card {
+    width: 18rem;
+    height: 30rem;
+    background-color: var(--White);
+    margin: 20px;
+    border-radius: 5px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-body p {
+    color: var(--GrayishBlue);
+  }
+
+  /* footer  */
+
+  footer {
+    background-color: var(--DarkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .footer-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    
+  }
+
+  .footer-small>*{
+    margin: 10px;
+  }
+
+  .footeronediv {
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+
+  .linkone {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .linkone > * {
+    color: var(--White);
+    margin: 10px;
+  }
+
+  .linktwo {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .linktwo > * {
+    color: var(--White);
+    margin: 10px;
+  }
+
+  .Request_section {
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    /* background-color: yellowgreen; */
+    margin: auto;
+  }
+
+ .Request_section>p{
+   text-align: center;
+   /* background-color: yellow; */
+ }
+
+}
